@@ -1,0 +1,204 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body with background image */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: url('images/login-bg-2.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+  }
+  
+  /* Dark overlay on background image */
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+    /* Container to center form */
+  .container {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Login form */
+  form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Headings */
+  h2 {
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  /* Inputs */
+  input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  input:focus {
+    border-color: #DC143C;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #B01030;
+  }
+  
+  /* Bottom text and link */
+  p {
+    margin-top: 15px;
+    color: #333;
+  }
+ 
+  
+  /* Responsive tweaks */
+  @media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 30px;
+    }
+  
+    nav h1 {
+      margin-bottom: 10px;
+    }
+  
+    nav .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    form {
+      padding: 30px 20px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    button {
+      font-size: 15px;
+    }
+  }
+
+  .google-btn {
+    display: inline-block;
+    background-color: #db4437;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  
+  .google-btn:hover {
+    background-color: #c23321;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* space between form and Google button */
+  }
+  
+  .google-signin-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .google-signin-wrapper > div {
+    margin-top: 10px;
+  }
+    
+  
+  
+  
+
+  
+  
+  @media screen and (max-width: 768px) {
+    .form-wrapper {
+      width: 100%;
+      max-width: 95%;
+      padding: 0 10px;
+    }
+  
+    .google-signin-wrapper {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+      transform: scale(0.95);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form-wrapper {
+      max-width: 100%;
+      padding: 0 5px;
+    }
+  
+    .google-signin-wrapper {
+      transform: scale(0.9);
+      margin-top: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .google-signin-wrapper {
+      transform: scale(0.85);
+    }
+  }
+  

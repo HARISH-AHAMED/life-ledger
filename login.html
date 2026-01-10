@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css?v=2">
+  <link rel="stylesheet" href="navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>LifeLedger</h1>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="dashboard.php">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Centered Container -->
+  <div class="container">
+    <div class="form-wrapper">
+      
+      <form action="login.php" method="POST">
+        <h2>Login</h2>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit" name="login">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </form>
+  
+      <!-- Google Sign-In -->
+      <div class="google-signin-wrapper">
+        <div>
+          <div id="g_id_onload"
+            data-client_id="500847702976-do2ikg0c88oabjke5o0jmvrsq058inh0.apps.googleusercontent.com"
+            data-context="signin"
+            data-ux_mode="popup"
+            data-login_uri="http://localhost/LIFELEDGER/google-login.php"
+            data-auto_prompt="false">
+          </div>
+      
+          <div class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-size="large"
+            data-logo_alignment="left">
+          </div>
+        </div>
+      </div>
+      
+  
+    </div>
+  </div>
+  
+  <script>
+    const links = document.querySelectorAll(".nav-links a");
+    const currentPage = window.location.pathname.split("/").pop();
+  
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  </script>
+  
+</body>
+</html>

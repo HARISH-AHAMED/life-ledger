@@ -1,0 +1,116 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body with background image */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: url('images/login-bg-2.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Dark filter over background image */
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    z-index: 1;
+  }
+
+  /* Main welcome section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* To account for navbar height */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .hero a.button {
+    padding: 12px 25px;
+    background-color: #DC143C;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+  
+  .hero a.button:hover {
+    background-color: #B01030;
+  }
+
+ /* Responsive for tablets and below */
+@media screen and (max-width: 768px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .hero a.button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Responsive for phones */
+@media screen and (max-width: 480px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .hero a.button {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 360px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero a.button {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}

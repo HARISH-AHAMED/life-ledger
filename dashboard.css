@@ -1,0 +1,208 @@
+/* 1. Full‑screen gradient background */
+body {
+    background: linear-gradient(to bottom right, #0c0c0c, #2a2a2a);
+    color: #fff;
+}
+
+
+/* 2. Dark, semi-transparent container for content */
+.dashboard-content {
+    background: rgba(30, 30, 30, 0.85); /* Slight transparency for content */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 3. Navbar styling for professional look */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Dark background with transparency */
+}
+.navbar a{
+    
+}
+
+/* 4. Cards & Panels: dark background, some transparency */
+.bg-white {
+    background-color: rgba(40, 40, 40, 0.8) !important; /* Dark, semi-transparent panels */
+    border: none;
+    color: #f0f0f0;
+}
+
+/* 5. Headings and Text: Light color for contrast */
+.dashboard-content h2,
+.dashboard-content h3,
+.dashboard-content h4 {
+    color: #fff;
+}
+
+/* 6. Tables: Adjusted for dark mode */
+.table {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table td, .table th {
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 7. Buttons: Custom colors to match the dark theme */
+.btn-danger {
+    background-color: #d9534f; /* Darker red button */
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+.btn-success {
+    background-color: #5bc0de; /* Lighter blue button */
+}
+
+.btn-success:hover {
+    background-color: #31b0d5;
+}
+
+/* 8. Chart Section: Dark chart background */
+.chart-wrapper {
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+/* 9. Form Controls: Better visibility with dark backgrounds */
+.form-control {
+    background-color: rgba(60, 60, 60, 0.8);
+    border: none;
+    color: #fff;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* 10. Links: Adjust color to stand out in dark mode */
+a {
+    color: #0d6efd;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+/* 11. Add shadow effects for a professional look */
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Make placeholder text white */
+::placeholder {
+    color: #ffffff !important;
+    opacity: 1; /* Ensure it's fully visible */
+}
+
+/* For WebKit browsers like Chrome and Safari */
+input::-webkit-input-placeholder {
+    color: #ffffff !important;
+}
+
+/* For Firefox */
+input::-moz-placeholder {
+    color: #ffffff !important;
+}
+
+/* For Microsoft Edge */
+input:-ms-input-placeholder {
+    color: #ffffff !important;
+}
+
+/* For older IE */
+input:-moz-placeholder {
+    color: #ffffff !important;
+}
+.form-control {
+    background-color: rgba(40, 40, 40, 0.9);
+    color: #fff;
+    border: 1px solid #555;
+}
+/* Table Styling */
+.expense-table {
+    background-color: #1e1e2f; /* Deep dark background */
+    color: #ffffff;
+    border-color: #343a40;
+}
+
+.expense-table thead th {
+    background-color: #ff4d4d !important; /* Red header */
+    color: #fff !important;
+    border-color: #ff9999;
+}
+
+.expense-table tbody tr:hover {
+    background-color: #29293d;
+}
+
+/* Button hover style */
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+/* Entire overlay background */
+.custom-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  /* Modal box styling */
+  .custom-modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  /* Header */
+  .custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Close button */
+  .close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  .custom-modal-footer {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  /* Optional: input spacing */
+  .custom-modal-body input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
